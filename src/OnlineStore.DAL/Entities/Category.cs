@@ -1,0 +1,12 @@
+namespace OnlineStore.DAL.Entities;
+
+public class Category
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public int? ParentId { get; set; }
+
+    public Category? Parent { get; set; }
+    public List<Category> Children { get; set; } = [];
+    public List<Product> Products { get; set; } = [];
+}
